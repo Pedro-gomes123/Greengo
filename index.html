@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Arduino</title>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"><span>GreenGo</span></a>
+    
+        <ul class="nav-links">
+            <li>
+                <a href="#about">Início</a>
+            </li>
+            <li>
+                <a href="#experience">Projeto</a>
+            </li>
+            <li>
+                <a href="#projects">Equipe</a>
+            </li>
+        </ul>
+
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+        
+        <button  onclick="baixarArquivo()" class="visit-btn" id="downloadZip">
+            <p>download do Projeto</p>
+        </button>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="img\pngwing.com.png" alt="">
+            <div class="info-box">
+                <div class="text">
+                    <h1>GreenGo</h1>
+                    <span>Arduino</span><br><br>
+                    <p id="sobre-mim">GreenGo é um jogo interativo de teste de reflexos, ideal para 
+                        desafiar a rapidez e precisão dos jogadores. O projeto consiste em uma caixa 
+                        equipada com luzes LED um botão e um buzzer, que juntos criam uma 
+                        experiência divertida e envolvente. O objetivo é simples: os jogadores 
+                        devem o botão o mais rápido possível assim que a luz verde acender.</p><br>
+                </div>
+
+                <div class="btn-group">
+                    <div class="btn"><a href="#tutorial" >Tutorial</a></div>
+                    <div class="btn"><a href="#codigo">Código</a></div>
+                    <div class="btn" ><a href="#simulador">simulador</a></div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        
+        <h2 class="section-title">Projeto</h2>
+
+        <div class="experience-info">
+            
+            <div class="grid">
+
+                <div class="grid-card">
+                    
+                    <br>
+                    <span>Arduino &nbsp<i class="fa-solid fa-gear"></i></span>
+                    <p> O Arduino é uma placa de prototipagem eletrônica de código aberto e hardware livre, composto por um microcontrolador Atmel, 
+                        circuitos de entrada e saída e programação via IDE. Seu software é desenvolvido por meio de linguagem baseada em C/C++, 
+                        usando um ambiente gráfico escrito em Java. Sendo assim, a programação do Arduino dispensa equipamentos 
+                        extras além de um cabo USB, permitindo infinitas modificações, conforme a 
+                        necessidade de cada usuário.</p>
+                </div>
+
+                <div class="grid-card">
+                    
+                    <br>
+                    <span>Funcionamento &nbsp<i id ="java" class="fa-brands fa-java"></i></span>
+                    <p>
+                        Para começar, o jogador deve pressionar o botão. Após isso, o LED vermelho acenderá, indicando que ele deve esperar o 
+                        próximo sinal. Com o LED vermelho ligado, o jogador deverá aguardar o momento em que o led verde irá acender e pressionar o botão
+                        nesse instante. Se o jogador acerta e pressiona o botão rapidamente, o LED verde pisca e um som positivo é emitido 
+                        pelo buzzer, indicando o sucesso. Caso o jogador aperte o botão antes, ou depois,  do LED verde o buzzer vai emitir um som de erro e o 
+                        jogo recomeçará.</p>
+                </div>
+
+                <div class="grid-card">
+
+                    <br>
+                    <span> Lista de Componentes</span>
+                    <p>Componentes usados :
+
+                        Buzzer -  O buzzer é um pequeno dispositivo que gera som, geralmente em forma de bipes (beeps). Ele pode ser ativo (emite som contínuo quando energizado) ou passivo (precisa de sinais PWM para gerar sons variados).
+                        
+                        Botão - Um botão é um componente eletrônico simples que, ao ser pressionado, permite a passagem de corrente elétrica (ou seja, fecha um circuito). Quando solto, o circuito é interrompido.
+                        
+                        LED - Um LED é um diodo emissor de luz que acende ao receber corrente elétrica na polaridade correta. É muito usado em projetos para indicar estados visuais de forma simples.
+                        
+                        LCD - Um display de cristal líquido usado para exibir textos, números ou outras informações visuais. O mais comum em projetos com Arduino é o LCD 16x2 (16 caracteres por linha, 2 linhas).</p>
+                </div>
+
+                <div class="grid-card">
+                   
+                    <br>
+                    <span>Desafios</span>
+                    <p>
+                        No decorrer do projeto vários desafios foram tomando forma, usarei de exemplo dois :
+
+                    1 - Código : De primeira, foi um pouco difícil entender o código que os professores passavam na aula por se tratar de uma linguagem que, para nós, era atípica, felizmente, depois de um tempo adquirimos conhecimento e entendemos o que precisava ser feito.
+                    2 Remontagem : De cara, conseguimos montar o nosso projeto com todos os componentes, mas, depois de um tempo, esquecemos onde cada cabo macho-fêmea ia (principalmente no LCD) e acabamos perdendo um tempo por não ter memorizado o que passava as informações do código pro LCD, felizmente, após poucas tentativas conseguimos e hoje temos domínio sobre o assunto.
+                    </p>
+                </div>
+
+                <div class="grid-card">
+
+                <span>Lições</span>
+                <p> Resiliência : Quando certo componente não funcionava e as idéias acabavam não indo pra frente, mas, ainda assim, acreditamos e acabou dando tudo certo.
+                    Trabalho em equipe : Acabamos desenvolvendo muito nosso trabalho em equipe nesse projeto, a cada desafio e a cada conquista.</p>
+
+                </div>
+
+                <div class="grid-card">
+
+                    <br>
+                    <span> Aplicativos e Plataformas usadas no projeto </span>
+                    <p>Usamos o tinkerpad para nos ajudar a construir o projeto e desenvolver o esquema conceitual, além disso, usamos o chatgpt para nos ajudar em coisas como reconstrução de projeto, e dúvidas gerais.</p>
+                    <br>
+                    <span> Palavras chaves</span>
+                    <p>Jogo, reflexo, arduino</p>
+                </div>
+
+                <div class="grid-card">
+
+                    <br>
+                    <span>Motivação</span>
+                    <p>Fizemos este projeto com base nas nossas próprias experiências e brincadeiras sobre reflexo, com a introdução do arduino no nosso repertório, pensamos que seria uma boa ideia fazer um leve jogo com essa ''brincadeira''</p> 
+                    <br>
+                    <span>Objetivo</span>
+                    <p>Melhorar o reflexo do participante, além de criar um momento de descontração e diversão</p>
+                </div>
+           
+    </section>
+    
+        <section class="projects" id="projects">
+
+            <h2 class="section-title">Equipe</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <img src="web-services.png" alt="">
+                    <h3>Eduardo Rocha</h3>
+                    <img id ="integrantes" src="img/fteduardo.jpg" alt="">
+                    <span class="social__link">
+                    <p id="sobre-mim"><a class="github" href="https://github.com/dudurrocha" target="_blank">Github</a></p>
+                    <p id="sobre-mim" ><a class="linkedin" href="https://www.linkedin.com/in/eduardo-rocha-4b543a268/" target="_blank">Linkedin</a></p>
+                    </span>
+                </div>
+
+                <div class="project-card">
+                    <img src="web-services.png" alt="">
+                    <h3>Pedro Gomes</h3>
+                    <img id ="integrantes" src="img/jogando.JPG" alt="">
+                    <span class="social__link">
+                    <p id="sobre-mim"> <a class="github" href="https://github.com/Pedro-gomes123" target="_blank">Github</a></p>
+                    <p id="sobre-mim"> <a class="linkedin" href="https://www.linkedin.com/in/pedro-de-carvalho-gomes-a58233339/" target="_blank">linkedin</a></p>
+                    </span>
+                </div>
+
+                <div class="project-card">
+                    <img src="web-services.png" alt="">
+                    <h3>José Vitor</h3>
+                    <p id="sobre-mim"></p>
+                    <img id ="integrantes" src="./img/jose.jpg" alt="">
+                    <span class="social__link">
+                    <p id="sobre-mim"><a class="github" href="http://GitHub.com/josevvito" target="_blank">Github</a></p>
+                    <p id="sobre-mim" ><a class="linkedin" href="https://www.linkedin.com/in/jos%C3%A9-vitor-195662290/" target="_blank">Linkedin</a></p>
+                    </span>
+                </div>
+
+                <div class="project-card">
+                    <img src="web-services.png" alt="">
+                    <h3>Gabriel Calado </h3>
+                    <p id="sobre-mim"></p>
+                    <img id ="integrantes" src="img/fotogabriel.jpeg" alt="">
+                    <span class="social__link">
+                    <p id="sobre-mim"><a class="github" href="http://github.com/gcalado55" target="_blank">Github</a></p>
+                    <p id="sobre-mim" ><a  class="linkedin" href="https://www.linkedin.com/in/gcalado?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedin</a></p>
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="input-box">
+
+                <h2 class="section-title">Esquema Conceitual</h2>
+                
+            </div>
+            <div class="section-tinkercard">
+
+                <img class="item" src="./img/Imagem do WhatsApp de 2024-11-23 à(s) 12.55.21_9f03e133.jpg" alt="Imagem do circuito eletronico do projeto realizado dentro do tinkercard">
+
+            </div>
+        </section>
+        <h2 class="section-title">Codigo</h2>
+        <section class="Codigo" id="codigo">
+            
+            <span  onclick="copiarTex()" class="Copiar"><p>Copiar</p></span>
+            <p class="codigo__tex" id="codigo__tex">
+                #include <Wire.h> <br>
+                    #include <LiquidCrystal_I2C.h>  // Biblioteca para o LCD I2C <br>
+                    
+                    // Inicializa o display LCD I2C com endereço 0x27 e tamanho 16x2 <br>
+                    LiquidCrystal_I2C lcd(0x27, 16, 2); <br><br>
+                    
+                    // Define os pinos dos LEDs, botão e buzzer<br>
+                    const int ledVermelho = 2;<br>
+                    const int ledVerde = 4;<br>
+                    const int botao = 7;<br>
+                    const int buzzer = 8; <br>
+                     // Pino para o buzzer<br><br>
+                    
+                    // Variáveis para armazenar o estado do jogo<br>
+                    bool botaoPressionado = false;<br>
+                    bool jogoEmAndamento = false;<br><br>
+                    
+                    // Notas musicais (frequências) para a música de vitória (Mario) e de derrota (Pac-Man)<br>
+                    #define NOTE_C4  262<br>
+                    #define NOTE_E4  330<br>
+                    #define NOTE_G4  392<br>
+                    #define NOTE_C5  523<br>
+                    #define NOTE_G3  196<br>
+                    #define NOTE_F4  349<br>
+                    #define NOTE_A3  220<br>
+                    #define NOTE_B3  247<br><br>
+                    
+                    void setup() {<br>
+                      // Configura os pinos como saída ou entrada<br>
+                      pinMode(ledVermelho, OUTPUT);<br>
+                      pinMode(ledVerde, OUTPUT);<br>
+                      pinMode(botao, INPUT_PULLUP);<br>
+                      pinMode(buzzer, OUTPUT);<br><br>
+                    
+                      // Inicia a comunicação serial para feedback<br>
+                      Serial.begin(9600);<br><br>
+                      
+                      // Inicia o LCD e exibe o nome do jogo<br>
+                      lcd.init();            // Inicializa o LCD<br>
+                      lcd.backlight();       // Liga a luz de fundo<br>
+                      mostrarInicio();<br>
+                    }<br><br>
+                    
+                    void loop() {<br>
+                      // Aguarda o jogador apertar o botão para iniciar o jogo<br>
+                      Serial.println("Pressione o botão para iniciar o jogo...");<br>
+                      lcd.clear();<br>
+                      lcd.setCursor(0, 0);<br>
+                      lcd.print("Aperte o botao");<br><br>
+                    
+                      while (digitalRead(botao) == HIGH) {<br>
+                        // Espera até que o botão seja pressionado (botão LOW)<br>
+                      }<br><br>
+                    
+                      // Uma vez que o botão é pressionado, o jogo começa<br>
+                      delay(500);  // Pequeno atraso para evitar leituras acidentais<br>
+                      Serial.println("Jogo iniciado! Espere o LED verde.");<br>
+                      digitalWrite(ledVerde, LOW);  // Garante que o LED verde esteja apagado ao iniciar uma nova rodada<br>
+                      lcd.clear();<br>
+                      lcd.setCursor(0, 0);<br>
+                      lcd.print("Olhe o LED verde");<br><br>
+                    
+                      // Gera um tempo aleatório para o LED vermelho<br>
+                      int tempoVermelho = random(500, 2000);  // Tempo aleatório entre 0,5 e 2 segundos<br><br>
+                    
+                      // Liga o LED vermelho para indicar que o jogador deve esperar<br>
+                      digitalWrite(ledVermelho, HIGH);<br>
+                      delay(tempoVermelho);<br>
+                      digitalWrite(ledVermelho, LOW);<br><br>
+                    
+                      // Liga o LED verde e aguarda o jogador apertar o botão<br>
+                      digitalWrite(ledVerde, HIGH);  // LED verde acende para o jogador apertar o botão<br>
+                      jogoEmAndamento = true;<br><br>
+                    
+                      // Loop para verificar se o jogador aperta o botão a tempo<br>
+                      unsigned long startTime = millis();<br>
+                      while (jogoEmAndamento) {<br>
+                        // Verifica se o botão foi pressionado<br>
+                        if (digitalRead(botao) == LOW) {<br>
+                          botaoPressionado = true;<br>
+                          jogoEmAndamento = false;  // Termina o loop<br>
+                        }<br><br>
+                    
+                        // Tempo limite para o jogador apertar o botão (por exemplo, 2 segundos)<br>
+                        if (millis() - startTime > 2000) {<br>
+                          jogoEmAndamento = false;  // Tempo esgotado<br>
+                        }<br>
+                      }<br><br>
+                    
+                      // Avalia o resultado<br>
+                      if (botaoPressionado) {<br>
+                        // Jogador apertou o botão no tempo correto<br>
+                        Serial.println("Parabéns! Você apertou no tempo certo!");<br>
+                        lcd.clear();<br>
+                        lcd.setCursor(0, 0);<br>
+                        lcd.print("Você663 Venceu!");<br>
+                        tocarMelodiaMario();<br>
+                        delay(500);  // Tempo curto em que o LED verde permanece aceso após o acerto<br>
+                      } else {<br>
+                        // Jogador não apertou o botão a tempo<br>
+                        Serial.println("Tempo esgotado ou botão apertado fora de hora!");<br>
+                        lcd.clear();<br>
+                        lcd.setCursor(0, 0);<br>
+                        lcd.print("Derrota! Tente");<br>
+                        lcd.setCursor(0, 1);<br>
+                        lcd.print("novamente.");<br>
+                        tocarMelodiaPacman();<br>
+                        // Pisca o LED vermelho para indicar erro<br>
+                        piscarLed(ledVermelho, 3, 300);<br>
+                      }<br><br>
+                    
+                      // Desliga o LED verde antes de iniciar a próxima rodada<br>
+                      digitalWrite(ledVerde, LOW);<br>
+                      botaoPressionado = false;<br>
+                      delay(1000);  // Pausa antes de começar uma nova rodada<br>
+                    }<br>
+                    
+                    // Função para exibir o nome do jogo no início<br>
+                    void mostrarInicio() {<br>
+                      lcd.clear();<br>
+                      lcd.setCursor(0, 0);<br>
+                      lcd.print("Bem-vindo ao");<br>
+                      lcd.setCursor(0, 1);<br>
+                      lcd.print("GREENGO!");<br>
+                      delay(2000);  // Exibe a mensagem por 2 segundos antes de iniciar o jogo<br>
+                    }<br><br>
+                    
+                    // Função para piscar o LED<br>
+                    void piscarLed(int pino, int vezes, int intervalo) {<br>
+                      for (int i = 0; i < vezes; i++) {<br>
+                        digitalWrite(pino, HIGH);<br>
+                        delay(intervalo);<br>
+                        digitalWrite(pino, LOW);<br>
+                        delay(intervalo);<br>
+                      }<br>
+                    }<br><br>
+                    
+                    // Função para tocar a melodia de vitória (tema Mario Bros simplificado)<br>
+                    void tocarMelodiaMario() {<br>
+                      int melody[] = {NOTE_E4, NOTE_E4, 0, NOTE_E4, 0, NOTE_C4, NOTE_E4, 0, NOTE_G4, 0, 0, 0, NOTE_G3, 0, 0, 0};<br>
+                      int noteDurations[] = {200, 200, 100, 200, 100, 200, 200, 100, 200, 300, 100, 300, 200, 100, 300, 400};<br><br>
+                    
+                      for (int i = 0; i < 16; i++) {<br>
+                        int noteDuration = noteDurations[i];<br>
+                        if (melody[i] == 0) {<br>
+                          delay(noteDuration);  // Pausa para as notas 0 (silêncio)<br>
+                        } else {<br>
+                          tone(buzzer, melody[i], noteDuration);<br>
+                        }<br>
+                        delay(noteDuration * 1.3);  // Pequeno atraso entre as notas<br>
+                      }<br>
+                      noTone(buzzer);<br>
+                    }<br><br>
+                    
+                    // Função para tocar a melodia de derrota (morte Pac-Man)<br>
+                    void tocarMelodiaPacman() {<br>
+                      int melody[] = {NOTE_C4, NOTE_B3, NOTE_A3, NOTE_G3, NOTE_F4, NOTE_F4};<br>
+                      int noteDurations[] = {100, 100, 100, 100, 300, 300};<br><br>
+                    
+                      for (int i = 0; i < 6; i++) {<br>
+                        int noteDuration = noteDurations[i];<br>
+                        tone(buzzer, melody[i], noteDuration);<br>
+                        delay(noteDuration * 1.3);  // Pequeno atraso entre as notas<br>
+                      }<br>
+                      noTone(buzzer);<br>
+                    }<br>
+            </p>
+        </section>
+
+       <section id="tutorial">    
+        
+            <h2 class="section-title">Tutorial</h2>
+
+            <iframe  class="video" width="750" height="550" src="https://www.youtube.com/embed/yP-l0lu6hj8?si=2g2meZlH8_SUbDvt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+       </section>
+
+       <section class="conteiner__simulador" id="simulador">
+            <span class="simulador">
+                <h2 class="section-title">simulador</h2>
+                <div class="caixa">
+                    <div class="leds">
+                    <div id="ledVermelho" class="led vermelho"></div>
+                    <div id="ledVerde" class="led verde"></div>
+                    </div>
+                    <button id="botao">Clique Aqui!</button>
+                    <audio id="sucessoAudio" src="./son/mixkit-video-game-win-2016.wav"></audio>
+                    <audio id="erroAudio" src="./son/mixkit-sad-game-over-trombone-471.wav"></audio>
+                </div> 
+            </span>
+        </section>
+
+        <footer>
+
+            <ul>
+                <li>
+                    <a href="#about">Início</a>
+                </li>
+                <li>
+                    <a href="#experience">Projeto</a>
+                </li>
+                <li>
+                    <a href="#projetos">Equipe</a>
+                </li>
+            </ul>
+
+            <p class="copyright">© All rights reserved</p>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
