@@ -62,19 +62,6 @@ botao.addEventListener('click', () => {
 });
 
 function copiarTex() {
-  const textToCopy = document.getElementById('codigo__tex').innerText;
-
-  
-  const tempInput = document.createElement('input');
-  tempInput.value = textToCopy;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand('copy');
-  document.body.removeChild(tempInput);
-
-  alert('Texto copiado para a área de transferência!');
-}
-function baixarArquivo() {
   document.getElementById('downloadZip').addEventListener('click', function() {
     const url = 'https://github.com/Pedro-gomes123/GreenGo/releases/download/v1.0.0/GreenGo.zip'; 
 
