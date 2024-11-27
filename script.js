@@ -77,7 +77,7 @@ function copiarTex() {
 function baixarArquivo(){
   document.getElementById('downloadZip').addEventListener('click', function() {
     
-    const url = 'URL_DO_ARQUIVO_ZIP'; 
+    const url = ' https://pedro-gomes123.github.io/arquivo/'; 
 
     
     const link = document.createElement('a');
