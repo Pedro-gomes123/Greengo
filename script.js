@@ -77,8 +77,7 @@ function copiarTex() {
 function baixarArquivo(){
   document.getElementById('downloadZip').addEventListener('click', function() {
     
-    const url = 'URL_DO_ARQUIVO_ZIP'; 
-
+    const url = 'https://github.com/Pedro-gomes123/GreenGo/releases/download/v1.0.0/GreenGo.zip';  // URL correta para o arquivo
     
     const link = document.createElement('a');
     link.href = url;
@@ -86,3 +85,4 @@ function baixarArquivo(){
     link.click();
   });
 }
+
