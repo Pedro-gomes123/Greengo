@@ -74,15 +74,14 @@ function copiarTex() {
 
   alert('Texto copiado para a área de transferência!');
 }
-function baixarArquivo(){
+function baixarArquivo() {
   document.getElementById('downloadZip').addEventListener('click', function() {
-    
-    const url = ' https://pedro-gomes123.github.io/arquivo/'; 
+    const url = 'https://github.com/Pedro-gomes123/GreenGo/releases/download/v1.0.0/GreenGo.zip'; 
 
-    
     const link = document.createElement('a');
     link.href = url;
     link.download = 'GreenGo.zip';  
     link.click();
   });
 }
+
